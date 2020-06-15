@@ -1,13 +1,21 @@
 <h2 class="heading-title">Modifier nom</h2>
-    <form action="" class="m-20">
+
+    <?php echo form_open("", "post", ['class' => 'm-20']); ?>
+
         <div class="group">
-            <input type="text" name="" class="control" placeholder="Entrez nom">
+
+            <?php echo form_input(['type' => 'text', 'name' => 'name', 'class' => 'control', 'placeholder' => 'Entrez nom']); ?>
+
         </div><!-- close group -->
                   
         <div class="group m-20">
-            <input type="submit" value="Valider &rarr;" class="btn-default">
+
+            <?php echo form_submit(['class' => 'btn-default', 'value' => 'Valider &rarr;']); ?>
+
                 <span class="ml-20">
+
                     <input type="reset" value="Reset &larr;" class="btn-white">
+
                 </span>
         </div><!-- close group -->
-    </form><!-- close form -->
+<?php echo form_close(); ?><!-- close form -->

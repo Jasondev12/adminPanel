@@ -55,7 +55,7 @@ class Cmshappyday
             foreach ($helper_names as $helper_name):
 
                 if (file_exists(("../system/helpers/" . $helper_name . ".php"))) {
-
+                    
                     require_once "../system/helpers/" . $helper_name . ".php";
 
                 } else {

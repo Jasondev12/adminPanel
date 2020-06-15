@@ -18,4 +18,6 @@
 </div><!-- close container bg -->
 </body>
 
+<script src="http://localhost:8888/adminPanel/assets/js/app.js"></script>
+
 </html>

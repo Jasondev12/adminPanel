@@ -19,5 +19,6 @@
     </div><!-- close layout -->
 
     <?php include "parts/footer.php"; ?>
+    
 </body>
 </html>

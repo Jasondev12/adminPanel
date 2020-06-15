@@ -1,2 +1,5 @@
-<script type="text/javascript" src="assets/js/jquery.min.js"></script>
-<script type="text/javascript" src="assets/js/hamburgerMenu.js"></script>
+<!-- SCRIPT JAVASCRIPT -->
+
+<?= link_js("assets/js/hamburgerMenu.js"); ?>
+<?= link_js("assets/js/innerTextInput.js"); ?>
+<?= link_js("assets/js/jquery.min.js"); ?>
