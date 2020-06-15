@@ -22,7 +22,7 @@ trait form_validation
              * if value is empty
              */
             if (empty($data)) {
-                return $this->errors[$field_name] = $label . " is required";
+                return $this->errors[$field_name] = $label . " est obligatoire";
             }
         }
 
@@ -31,7 +31,7 @@ trait form_validation
          */
         if (in_array("not_int", $rules)) {
             if (!preg_match($pattren, $data)) {
-                return $this->errors[$field_name] = $label . " must be alphabetic character";
+                return $this->errors[$field_name] = $label . " doit être de caractères alphabétique";
             }
         }
 
@@ -40,7 +40,7 @@ trait form_validation
          */
         if (in_array("int", $rules)) {
             if (!preg_match($int_pattren, $data)) {
-                return $this->errors[$field_name] = $label . " must be integer";
+                return $this->errors[$field_name] = $label . " doit être un nombre";
             }
 
         }
@@ -63,7 +63,7 @@ trait form_validation
              */
             $min_len_value = $rules[$min_len_value];
             if (strlen($data) < $min_len_value) {
-                return $this->errors[$field_name] = $label . " is less than " . $min_len_value . " characters";
+                return $this->errors[$field_name] = $label . " est inférieur à " . $min_len_value . " caractères";
 
             }
 
@@ -87,7 +87,7 @@ trait form_validation
              */
             $max_len_value = $rules[$max_len_value];
             if (strlen($data) > $max_len_value) {
-                return $this->errors[$field_name] = $label . " is grater than " . $max_len_value . " characters";
+                return $this->errors[$field_name] = $label . " est supérieur à " . $max_len_value . " caractères";
 
             }
 
@@ -123,7 +123,7 @@ trait form_validation
             }
 
             if ($data !== $password) {
-                return $this->errors[$field_name] = $label . " is not matched";
+                return $this->errors[$field_name] = $label . " et mdp ne correspondent pas";
             }
 
         }
@@ -156,7 +156,7 @@ trait form_validation
             $db = new Database;
             if ($db->Select_Where($table_name, [$field_name => $data])) {
                 if ($db->Count() > 0) {
-                    return $this->errors[$field_name] = $label . " is already exist";
+                    return $this->errors[$field_name] = $label . " existe déjà";
                 }
             }
 
@@ -181,12 +181,16 @@ trait form_validation
         if($_SERVER['REQUEST_METHOD'] == "POST" || $_SERVER['REQUEST_METHOD'] == "post"){
             if(isset($_POST[$field_name])){
                 return $_POST[$field_name];
+            } else {
+                return false;
             }
             
         } else if($_SERVER['REQUEST_METHOD'] == "GET" || $_SERVER['REQUEST_METHOD'] == "get") {
             if(isset($_GET[$field_name])){
                return $_GET[$field_name];
-            } 
+            }  else{
+                return false;
+            }
         }
     }
 

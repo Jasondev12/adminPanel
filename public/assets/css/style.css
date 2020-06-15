@@ -422,6 +422,12 @@ nav ul li{
     font-size: 2rem;
 }
 
+.error{
+    font-size: 1.2rem;
+    color: var(--colorRedError);
+    font-family: sans-serif;
+}
+
 /* Table */
 
 .table{
@@ -508,6 +514,13 @@ nav ul li{
     color: var(--colorBlueHD);
     line-height: 2.6rem;
     text-align: center;
+}
+
+.accountMessage{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* MEDIA QUERIES */

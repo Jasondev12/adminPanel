@@ -6,19 +6,48 @@
                 <h2>Créer un compte utilisateur</h2>
             </div><!-- close heading -->
 
-            <?php echo form_open("", "POST"); ?>
+            <?php echo form_open("accountController/signUpSubmit", "POST"); ?>
 
                 <div class="group">
-                    <?php echo form_input(['type' => 'text', 'name' => 'name', 'class' => 'control', 'placeholder' => 'Votre nom']); ?>
+                    <?php echo form_input(['type' => 'text', 'name' => 'fullName', 'class' => 'control', 'placeholder' => 'Votre nom', 'value' => $this->set_value('fullName')]); ?>
+
+                    <div class="error">
+                    <?php if (!empty($this->errors['fullName'])): ?>
+                    <?php echo $this->errors['fullName']; ?>
+                    <?php endif;?>
+
+                    </div>
+
                 </div><!-- close group -->
                 <div class="group">
-                    <?php echo form_input(['type' => 'email', 'name' => 'email', 'class' => 'control', 'placeholder' => 'E-mail']); ?>
+                    <?php echo form_input(['type' => 'email', 'name' => 'email', 'class' => 'control', 'placeholder' => 'E-mail', 'value' => $this->set_value('email')]); ?>
+
+                    <div class="error">
+                    <?php if (!empty($this->errors['email'])): ?>
+                    <?php echo $this->errors['email']; ?>
+                    <?php endif;?>
+                    </div>
+
                 </div><!-- close group -->
                 <div class="group">
-                    <?php echo form_input(['type' => 'password', 'name' => 'password', 'class' => 'control', 'placeholder' => 'Créez mot de passe']); ?>
+                    <?php echo form_input(['type' => 'password', 'name' => 'password', 'class' => 'control', 'placeholder' => 'Créez mot de passe', 'value' => $this->set_value('password')]); ?>
+
+                    <div class="error">
+                    <?php if (!empty($this->errors['password'])): ?>
+                    <?php echo $this->errors['password']; ?>
+                    <?php endif;?>
+                    </div>
+
                 </div><!-- close group -->
                 <div class="group">
-                    <?php echo form_input(['type' => 'password', 'name' => 'confirm_password', 'class' => 'control', 'placeholder' => 'Confirmation mot de passe']); ?>
+                    <?php echo form_input(['type' => 'password', 'name' => 'confirmPassword', 'class' => 'control', 'placeholder' => 'Confirmation mot de passe', 'value' => $this->set_value('confirmPassword')]); ?>
+
+                    <div class="error">
+                    <?php if (!empty($this->errors['confirmPassword'])): ?>
+                    <?php echo $this->errors['confirmPassword']; ?>
+                    <?php endif;?>
+                    </div>
+
                 </div><!-- close group -->
                 <div class="group m-20">
                     <?php echo form_submit(['class' => 'btn', 'value' => 'Créer compte &rarr;']); ?>

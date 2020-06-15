@@ -8,13 +8,13 @@ $database = [
     'host' => 'localhost',
     'username' => 'root',
     'database' => 'mvc',
-    'password' => 'root',
+    'password' => '',
 
 ];
 
 $default = [
 
-    'controller' => 'welcome',
+    'controller' => 'ajaxController',
     'method' => 'index',
     'param' => [],
 
