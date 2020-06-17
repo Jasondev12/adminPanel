@@ -1,9 +1,9 @@
 <div class="sidebar">
     <ul>
         
-        <li><?php echo anchor_void("javascript:void(0)", "<span class='profile'><img src='" . Base_URL . "/assets/images/admin.png' class='profile-img'></span>"); ?></li>
+        <li><?php echo anchor_void("javascript:void(0)", "<span class='profile'><img src='" . Base_URL . "/assets/images/" . $this->get_session('image') . "' class='profile-img'></span>"); ?></li>
 
-        <li><?php echo anchor_void("javascript:void(0)", '<span class="icon">&#10162;</span>Maes Jason'); ?></li>
+        <li><?php echo anchor_void("javascript:void(0)", '<span class="icon">&#10162;</span>' . ucwords($this->get_session('name'))); ?></li>
 
         <li><?php echo anchor("profile/changePictureView", '<span class="icon">&#9851;</span>Changer photo de profil'); ?></li>
 

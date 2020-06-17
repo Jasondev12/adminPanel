@@ -40,7 +40,7 @@ class AccountController extends Cmshappyday
             ];
 
             if ($this->model->signup($data)) {
-                
+
                 $this->set_flash("signUpSuccess", "Votre compte a été créé avec succès");
                 $this->login();
 
@@ -62,5 +62,49 @@ class AccountController extends Cmshappyday
         $data['title'] = "Connexion utilisateur";
         $this->view("index", $data);
 
+    }
+
+    public function loginSubmit()
+    {
+
+        $this->validation('email', 'Email', "required");
+        $this->validation('password', 'Password', "required");
+        if ($this->run()) {
+
+            $email = $this->post('email');
+            $password = $this->post('password');
+            $result = $this->model->login($email, $password);
+
+            if ($result === "EmailNotFound") {
+                $this->set_flash("emailError", "Email est incorrecte");
+                $this->login();
+            } else if ($result === "PasswordNotMatched") {
+                $this->set_flash("passwordError", "Mot de passe est incorrecte");
+                $this->login();
+            } else if ($result['status'] === "success") {
+              
+                $sessionData = [
+
+                    'userId' => $result['data']->id,
+                    'loader' => true,
+                    'name' => $result['data']->fullName,
+                    'image' => $result['data']->image
+
+                ];
+
+                $this->set_session($sessionData);
+                redirect("ajaxController/index");
+
+            }
+
+        } else {
+            $this->login();
+        }
+    }
+
+    public function logout(){
+
+        $this->destroy_session();
+        $this->login();
     }
 }

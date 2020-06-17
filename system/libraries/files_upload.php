@@ -33,7 +33,7 @@ trait Files_upload
 
         if (empty($this->file_data['file_name'])) {
 
-            return $this->file_errors[$this->file_data['field_name']] = $this->file_data['label'] . " is required";
+            return $this->file_errors[$this->file_data['field_name']] = $this->file_data['label'] . " est obligatoire";
         }
 
         /*
@@ -44,7 +44,7 @@ trait Files_upload
 
         $extensions = explode("|", $this->file_data['extensions']);
         if (!in_array($file_extension, $extensions)) {
-            return $this->file_errors[$this->file_data['field_name']] = $file_extension . " is not a valid extension";
+            return $this->file_errors[$this->file_data['field_name']] = $file_extension . " n'est pas une extension valide ( png ou jpg )";
         }
 
         /*
@@ -53,7 +53,7 @@ trait Files_upload
 
         if (!file_exists($this->file_data['upload_path'])) {
             $directory = rtrim($this->file_data['upload_path'], "/");
-            return $this->file_errors[$this->file_data['field_name']] = $directory . " is not a valid directory";
+            return $this->file_errors[$this->file_data['field_name']] = $directory . " n'est pas un répertoire valide";
         }
 
     }
@@ -61,25 +61,22 @@ trait Files_upload
     public function file_run()
     {
 
-        if (empty($this->file_errors)) {
+        if(empty($this->file_errors)){
             /*
-             * Get the file name without extension
-             */
+                 * Get the file name without extension
+            */ 
             $file_name = pathinfo($this->file_data['file_name'], PATHINFO_FILENAME);
             /*
-             * Replace empty spaces on underscore
-             */
+                 * Replace empty spaces on undersocre
+            */ 
             $file_name = preg_replace("/\s+/", "_", $file_name);
             /*
-             * Concatinate file name with time
-             */
+                 * Concatinate file name with time
+            */ 
             $file_name = time() . $file_name;
             $file_name = $file_name . "." . $this->file_data['file_ext'];
-
             move_uploaded_file($this->file_data['file_tmp'], $this->file_data['upload_path'] . $file_name);
-
             $this->file_data['file_name'] = $file_name;
-
             return true;
         } else {
             $this->data = null;
@@ -87,3 +84,4 @@ trait Files_upload
         }
     }
 }
+?>

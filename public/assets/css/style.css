@@ -385,6 +385,7 @@ nav ul li{
     color: var(--colorWhite);
     box-shadow: 0 1rem 1rem rgba(0, 0, 0, .4);
     border-radius: .3em;
+    margin-bottom: 15px;
 }
 
 .alert-success{
