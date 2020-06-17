@@ -21,6 +21,21 @@ class Profile extends Cmshappyday
         $this->view("dashboard", $data);
     }
 
+    public function updateName(){
+
+        $this->validation("fullName", "Nom complet", "required|not_int");
+        if($this->run()){
+            $fullName = $this->post('fullName');
+            if($this->model->changeName($fullName)){
+                $this->set_flash("nameChanged", "Votre nom de profil est mise à jour avec succès");
+                $this->set_session('name', $fullName);
+                redirect("welcomeController/index");
+            }
+        } else {
+            $this->index();
+        }
+    }
+
     public function changePictureView()
     {
         $data['layout'] = "parts/changePicture";
@@ -74,7 +89,19 @@ class Profile extends Cmshappyday
         $this->validation("confirmPassword", "Confirmation du mot de passe", "required|confirm|newPassword");
 
         if ($this->run()) {
-            echo 'success';
+
+            $currentPassword = $this->post('password');
+            $newPassword = $this->hash($this->post('newPassword'));
+            $result = $this->model->updatePassword($currentPassword, $newPassword);
+
+            if ($result === "currentPasswordWrong") {
+                $this->set_flash("currentPasswordWrong", "Le mot de passe actuel est incorrect");
+                $this->changePasswordView();
+            } else if ($result === "success") {
+                $this->set_flash("passwordChanged", "Votre mot de passe a été modifié");
+                redirect("welcomeController/index");
+            }
+
         } else {
             $this->changePasswordView();
         }

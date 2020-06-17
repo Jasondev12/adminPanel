@@ -2,6 +2,13 @@
 
 class WelcomeController extends Cmshappyday
 {
+    public function __construct()
+    {
+        parent::__construct();
+        if (!$this->get_session('userId')) {
+            redirect("accountController/login");
+        }
+    }
 
     public function index()
     {
