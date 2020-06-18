@@ -14,7 +14,7 @@ $database = [
 
 $default = [
 
-    'controller' => 'ajaxController',
+    'controller' => 'AjaxController',
     'method' => 'index',
     'param' => [],
 

@@ -1,6 +1,6 @@
 <h2 class="heading-title">Modifier nom</h2>
 
-    <?php echo form_open("profile/updateName", "post", ['class' => 'm-20']); ?>
+    <?php echo form_open("Profile/updateName", "post", ['class' => 'm-20']); ?>
 
         <div class="group">
 

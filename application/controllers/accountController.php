@@ -93,7 +93,7 @@ class AccountController extends Cmshappyday
                 ];
 
                 $this->set_session($sessionData);
-                redirect("ajaxController/index");
+                redirect("AjaxController/index");
 
             }
 

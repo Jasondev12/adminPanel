@@ -6,7 +6,7 @@
                 <h2>Créer un compte utilisateur</h2>
             </div><!-- close heading -->
 
-            <?php echo form_open("accountController/signUpSubmit", "POST"); ?>
+            <?php echo form_open("AccountController/signUpSubmit", "POST"); ?>
 
                 <div class="group">
                     <?php echo form_input(['type' => 'text', 'name' => 'fullName', 'class' => 'control', 'placeholder' => 'Votre nom', 'value' => $this->set_value('fullName')]); ?>
@@ -55,7 +55,7 @@
                 <div class="group m-30">
                 <h3 class="links">Vous possédez déjà un compte ?</h3>
 
-                    <?php echo anchor("accountController/login", "Identifiez-vous", ['class' => 'linkAccount']); ?>
+                    <?php echo anchor("AccountController/login", "Identifiez-vous", ['class' => 'linkAccount']); ?>
 
                 </div><!-- close group -->
             <?php echo form_close(); ?><!-- close form -->

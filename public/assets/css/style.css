@@ -476,6 +476,25 @@ nav ul li{
     padding: .5rem 1rem;
 }
 
+.delete:hover{
+    color: var(--colorGreenSuccess);
+}
+
+.update:hover{
+    color: var(--colorBlueHD);;
+}
+
+.update{
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: inline-block;
+    border-radius: 5rem;
+    background-color: var(--colorOrange);
+    color: var(--colorWhite);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, .5);
+    padding: .5rem 1rem;
+}
+
 /* Loader */
 
 .loader{

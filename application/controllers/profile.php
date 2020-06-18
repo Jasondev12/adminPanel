@@ -7,7 +7,7 @@ class Profile extends Cmshappyday
     {
         parent::__construct();
         if (!$this->get_session('userId')) {
-            redirect("accountController/login");
+            redirect("AccountController/login");
         }
 
         $this->model = $this->model("ProfileModel");
@@ -29,7 +29,7 @@ class Profile extends Cmshappyday
             if($this->model->changeName($fullName)){
                 $this->set_flash("nameChanged", "Votre nom de profil est mise à jour avec succès");
                 $this->set_session('name', $fullName);
-                redirect("welcomeController/index");
+                redirect("WelcomeController/index");
             }
         } else {
             $this->index();
@@ -62,7 +62,7 @@ class Profile extends Cmshappyday
 
                 $this->set_session("image", $pictureName);
                 $this->set_flash("profilePicture", "Votre image de profil est mise à jour avec succès");
-                redirect("welcomeController/index");
+                redirect("WelcomeController/index");
 
             } else {
                 echo 'sorry';
@@ -99,7 +99,7 @@ class Profile extends Cmshappyday
                 $this->changePasswordView();
             } else if ($result === "success") {
                 $this->set_flash("passwordChanged", "Votre mot de passe a été modifié");
-                redirect("welcomeController/index");
+                redirect("WelcomeController/index");
             }
 
         } else {

@@ -27,6 +27,7 @@
                 <th scope="col">Email</th>
                 <th scope="col">Rôle</th>
                 <th scope="col">Supprimer</th>
+                <th scope="col">Mettre à jour</th>
             </tr>
         </thead>
             <tbody>
@@ -35,28 +36,32 @@
                     <td data-label="Nom :">Maes</td>
                     <td data-label="Email :">maesjasonpro@gmail.com</td>
                     <td data-label="Rôle :">Admin</td>
-                    <td data-label="Supprimer :"><a href="#" class="delete">Supprimer &#10005</a></td>
+                    <td data-label="Supprimer :"><a href="#" class="delete">Supprimer &#10005;</a></td>
+                    <td data-label="Modifier :"><a href="#" class="update">Modifier &#9888;</a></td>
                 </tr>
                 <tr>
                     <td scope="row" data-label="ID :">2</td>
                     <td data-label="Nom :">Lopez</td>
                     <td data-label="Email :">lopezA@gmail.com</td>
                     <td data-label="Rôle :">Modo</td>
-                    <td data-label="Supprimer :"><a href="#" class="delete">Supprimer &#10005</a></td>
+                    <td data-label="Supprimer :"><a href="#" class="delete">Supprimer &#10005;</a></td>
+                    <td data-label="Modifier :"><a href="#" class="update">Modifier &#9888;</a></td>
                 </tr>
                 <tr>
                     <td scope="row" data-label="ID :">3</td>
                     <td data-label="Nom :">Roczen</td>
                     <td data-label="Email :">Roczen@gmail.com</td>
                     <td data-label="Rôle :">Modo</td>
-                    <td data-label="Supprimer :"><a href="#" class="delete">Supprimer &#10005</a></td>
+                    <td data-label="Supprimer :"><a href="#" class="delete">Supprimer &#10005;</a></td>
+                    <td data-label="Modifier :"><a href="#" class="update">Modifier &#9888;</a></td>
                 </tr>
                 <tr>
                     <td scope="row" data-label="ID :">4</td>
                     <td data-label="Nom :">Webb</td>
                     <td data-label="Email :">Webb@gmail.com</td>
                     <td data-label="Rôle :">Modo</td>
-                    <td data-label="Supprimer :"><a href="#" class="delete">Supprimer &#10005</a></td>
+                    <td data-label="Supprimer :"><a href="#" class="delete">Supprimer &#10005;</a></td>
+                    <td data-label="Modifier :"><a href="#" class="update">Modifier &#9888;</a></td>
                 </tr>
             </tbody>
     </table>

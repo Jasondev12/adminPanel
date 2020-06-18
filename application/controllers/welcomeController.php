@@ -6,7 +6,7 @@ class WelcomeController extends Cmshappyday
     {
         parent::__construct();
         if (!$this->get_session('userId')) {
-            redirect("accountController/login");
+            redirect("AccountController/login");
         }
     }
 

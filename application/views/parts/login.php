@@ -12,7 +12,7 @@
         <h2>Connexion utilisateur</h2>
     </div><!-- close heading -->
 
-    <?php echo form_open("accountController/loginSubmit", "POST"); ?>
+    <?php echo form_open("AccountController/loginSubmit", "POST"); ?>
 
     <div class="group">
         <?php echo form_input(['type' => 'email', 'name' => 'email', 'class' => 'control', 'placeholder' => 'Entrez E-mail', 'value' => $this->set_value('email')]); ?>
@@ -39,7 +39,7 @@
     <div class="group m-30">
     <h3 class="links">Vous ne possédez pas de compte ?</h3>
 
-        <?php echo anchor("accountController/index", "Créez votre compte", ['class' => 'linkAccount']); ?>
+        <?php echo anchor("AccountController/index", "Créez votre compte", ['class' => 'linkAccount']); ?>
 
     </div><!-- close group -->
     <?php echo form_close(); ?><!-- close form -->

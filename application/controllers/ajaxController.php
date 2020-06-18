@@ -7,7 +7,7 @@ class AjaxController extends Cmshappyday
     {
         parent::__construct();
         if (!$this->get_session('userId')) {
-            redirect("accountController/login");
+            redirect("AccountController/login");
         }
     }
 
@@ -17,5 +17,11 @@ class AjaxController extends Cmshappyday
         $data['layout'] = "parts/users";
         $data['title'] = "Ajouter utilisateur";
         $this->view("ajaxView", $data);
+    }
+
+    public function addUser(){
+
+        $userName = $this->post('user');
+        echo $userName;
     }
 }

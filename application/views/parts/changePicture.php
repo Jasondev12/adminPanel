@@ -1,6 +1,6 @@
 <h2 class="heading-title">Modifier photo profil</h2>
     
-    <?php echo form_multipart("profile/updatePicture", "POST", ['class' => 'm-20']); ?>
+    <?php echo form_multipart("Profile/updatePicture", "POST", ['class' => 'm-20']); ?>
 
         <div class="group">
             <label for="myImage" id="myLabel"></label>

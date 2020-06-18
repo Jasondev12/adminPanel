@@ -2,7 +2,7 @@
 
 <h2 class="heading-title">Modifier mot de passe</h2>
 
-    <?php echo form_open("profile/changePassword", "POST", ['class' => 'm-20']); ?>
+    <?php echo form_open("Profile/changePassword", "POST", ['class' => 'm-20']); ?>
 
         <div class="group">
 

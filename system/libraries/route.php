@@ -63,7 +63,7 @@ class Route
                 unset($url[1]);
             } else {
 
-                die("<div style='background-color:#f1f4f4;color:#afaaaa;border: 1px dotted #afaaaa;padding: 10px; border-radius: 4px'>Sorry Method <strong>" . $url[1] . "</strong> is not found</div>");
+                die("<div style='background-color:#f1f4f4;color:#afaaaa;border: 1px dotted #afaaaa;padding: 10px; border-radius: 4px'>Sorry Method <strong>" . $url[1] . "</strong> is not founde</div>");
             }
         }
 
