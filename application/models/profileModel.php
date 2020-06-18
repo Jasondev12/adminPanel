@@ -1,6 +1,6 @@
 <?php
 
-class profileModel extends Database
+class ProfileModel extends Database
 {
 
     public function updateProfilePicture($pictureName)

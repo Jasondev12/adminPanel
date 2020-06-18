@@ -10,7 +10,7 @@ class Profile extends Cmshappyday
             redirect("accountController/login");
         }
 
-        $this->model = $this->model("profileModel");
+        $this->model = $this->model("ProfileModel");
     }
 
     public function index()

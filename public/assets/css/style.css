@@ -311,6 +311,10 @@ nav ul li{
     margin-bottom: 2rem;
 }
 
+#contentUser{
+    width: auto;
+}
+
 .heading-title{
     font-weight: 300;
 }
@@ -325,6 +329,20 @@ nav ul li{
     outline: none;
     cursor: pointer;
     font-size: 1.3rem;
+}
+
+#addUser{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#userName{
+    width: 50%;
+}
+
+.chooseRole{
+    display: flex;
+    margin-bottom: 10px;
 }
 
 .btn-white{
@@ -544,6 +562,55 @@ nav ul li{
     .contents, .content{
         width: 100%;
     }
+
+    @media screen and (max-width: 600px) {
+        table {
+          border: 0;
+        }
+      
+        table caption {
+          font-size: 1.3em;
+        }
+        
+        table thead {
+          border: none;
+          clip: rect(0 0 0 0);
+          height: 1px;
+          margin: -1px;
+          overflow: hidden;
+          padding: 0;
+          position: absolute;
+          width: 1px;
+        }
+        
+        table tr {
+          border-bottom: 3px solid #ddd;
+          display: block;
+          border: 1px solid var(--colorRedDark);;
+        }
+        
+        .table td, .table th {
+          border-bottom: 1px solid #ddd;
+          display: block;
+          font-size: 1em;
+          text-align: right;
+        }
+
+        .table, th, td {
+            border: none;
+        }
+        
+        table td::before {
+          content: attr(data-label);
+          float: left;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+        
+        table td:last-child {
+          border-bottom: 0;
+        }
+      }
 }
 
 

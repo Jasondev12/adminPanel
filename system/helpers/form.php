@@ -138,7 +138,7 @@ function form_button($fields)
  * Form Opening Helper
  */
 
-function form_open($action, $method, $options = [])
+function form_open($action = "", $method = "", $options = [])
 {
 
     if (array_key_exists("id", $options)) {

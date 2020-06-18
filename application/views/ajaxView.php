@@ -12,8 +12,8 @@
     <?php include "parts/nav.php";?>
         <div class="layout">
             <?php include "parts/sidebar.php";?>
-        <div class="contents">
-            <div class="content">
+        <div class="contents" id="contentsUser">
+            <div class="content" id="contentUser">
                <?php $this->view($data['layout']);?>
             </div><!-- close content -->
         </div><!-- close contents -->

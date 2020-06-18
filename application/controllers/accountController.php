@@ -8,7 +8,7 @@ class AccountController extends Cmshappyday
     {
 
         parent::__construct();
-        $this->model = $this->model("accountModel");
+        $this->model = $this->model("AccountModel");
     }
 
     public function index()

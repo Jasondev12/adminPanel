@@ -5,9 +5,9 @@ class Route
 
     /*
 
-     * @Framework Name    : cmshappyday
+     * @Framework Name    : Cmshappyday
      * @Auther Name       : Maes Jason
-     * @License           : cmshappyday
+     * @License           : Cmshappyday
      * @Verion            : 1.0.0
      * @Description       : Route class get the url, split the url & sanitize the url
 

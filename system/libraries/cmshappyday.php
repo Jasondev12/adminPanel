@@ -2,7 +2,7 @@
 
 class Cmshappyday
 {
-    use form_validation, files_upload, session;
+    use Form_validation, Files_upload, session;
     public function __construct()
     {
         $this->start();

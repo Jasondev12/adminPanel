@@ -1,7 +1,7 @@
 <?php
 error_reporting(0);
 
-trait form_validation
+trait Form_validation
 {
 
     public $errors = [];

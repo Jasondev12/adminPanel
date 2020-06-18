@@ -1,6 +1,6 @@
 <?php
 
-class accountModel extends Database
+class AccountModel extends Database
 {
 
     public function signup($data)
